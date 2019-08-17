@@ -1,0 +1,22 @@
+h1,h2,h3,h4,h5,h6,
+p,ul,li,i {
+    color: white;
+}
+h1 {
+    margin-bottom: 0;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+h2, p {
+    font-family: "Archivo Narrow", sans-serif;
+}
+h2 { font-size: 1.2rem; }
+p { font-size: 1rem; }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
