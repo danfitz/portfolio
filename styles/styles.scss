@@ -6,6 +6,7 @@
 
 html {
   font-size: 125%;
+  overflow-x: hidden;
 }
 body {
   background-color: white;
@@ -34,7 +35,6 @@ header {
     border-radius: 50%;
     object-fit: cover;
     object-position: center 30%;
-    opacity: 0.95;
   }
   .siteTitle { margin: 3rem 0 0; }
   .siteDescription { margin: 0 0 3rem; }

@@ -230,6 +230,7 @@ ul {
 
 html {
   font-size: 125%;
+  overflow-x: hidden;
 }
 
 body {
@@ -267,7 +268,6 @@ header .siteProfile {
      object-fit: cover;
   -o-object-position: center 30%;
      object-position: center 30%;
-  opacity: 0.95;
 }
 
 header .siteTitle {
