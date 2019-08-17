@@ -198,16 +198,16 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   }
 }
 
-h1, h2, h3, h4, h5, h6,
-p, ul, li, i {
-  color: white;
+* {
+  color: #333;
 }
 
 h1 {
   margin-bottom: 0;
-  font-family: "Archivo Black", sans-serif;
-  font-size: 3rem;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 4rem;
   text-transform: uppercase;
+  color: #222;
 }
 
 h2, p {
@@ -233,7 +233,8 @@ html {
 }
 
 body {
-  background-color: cornflowerblue;
+  background-color: white;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -244,7 +245,7 @@ body {
 
 header {
   position: relative;
-  margin: 3rem 0;
+  margin: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -261,10 +262,11 @@ header {
 header .siteProfile {
   width: 10rem;
   height: 10rem;
+  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center top;
-     object-position: center top;
+  -o-object-position: center 30%;
+     object-position: center 30%;
   opacity: 0.95;
 }
 
@@ -277,10 +279,9 @@ header .siteDescription {
 }
 
 header #comingSoonTyped {
-  color: white;
+  color: #222;
   font-size: 1rem;
   font-family: "Archivo Narrow", sans-serif;
-  margin: 3rem 0;
 }
 
 header .socialLinks {
@@ -299,17 +300,17 @@ header .socialLinks li:nth-child(2) {
 }
 
 header .blogLink {
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Reenie Beanie", cursive;
   text-transform: uppercase;
 }
 
 header .socialLinks a {
-  color: white;
+  color: #333;
   text-decoration: none;
 }
 
 header .socialLinks a:visited {
-  color: white;
+  color: #333;
 }
 
 header .socialLinks a:hover, header .socialLinks a:focus,
@@ -319,7 +320,8 @@ header .socialLinks i:hover, header .socialLinks i:focus {
 
 .staggerContainer {
   position: absolute;
-  top: 0;
+  height: 100%;
+  width: 100%;
   z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -331,6 +333,9 @@ header .socialLinks i:hover, header .socialLinks i:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .staggerContainer .staggerVisualizer {
@@ -345,13 +350,13 @@ header .socialLinks i:hover, header .socialLinks i:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 10rem;
-  height: 10rem;
+  width: 25.5rem;
+  height: 25.5rem;
 }
 
 .staggerContainer .staggerVisualizer div {
-  width: 0.58rem;
-  height: 0.58rem;
-  border: 1px solid white;
-  background-color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #A6C5ED;
+  background-color: #A6C5ED;
 }

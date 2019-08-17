@@ -8,7 +8,8 @@ html {
   font-size: 125%;
 }
 body {
-  background-color: cornflowerblue;
+  background-color: white;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -21,7 +22,7 @@ body {
 
 header {
   position: relative;
-  margin: 3rem 0;
+  margin: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,18 +31,18 @@ header {
   .siteProfile {
     width: 10rem;
     height: 10rem;
+    border-radius: 50%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 30%;
     opacity: 0.95;
   }
   .siteTitle { margin: 3rem 0 0; }
   .siteDescription { margin: 0 0 3rem; }
 
   #comingSoonTyped {
-    color: white;
+    color: #222;
     font-size: 1rem;
     font-family: "Archivo Narrow", sans-serif;
-    margin: 3rem 0;
   }
 
   .socialLinks {
@@ -53,12 +54,12 @@ header {
   .socialLinks li:nth-child(2) { margin: 0 1rem; }
 
   .blogLink {
-    font-family: "Archivo Black", sans-serif;
+    font-family: "Reenie Beanie", cursive;
     text-transform: uppercase;
   }
 
-  .socialLinks a { color: white; text-decoration: none; }
-  .socialLinks a:visited { color: white; }
+  .socialLinks a { color: #333; text-decoration: none; }
+  .socialLinks a:visited { color: #333; }
 
   .socialLinks a:hover, .socialLinks a:focus,
   .socialLinks i:hover, .socialLinks i:focus {
@@ -70,25 +71,27 @@ header {
 
 .staggerContainer {
   position: absolute;
-  top: 0;
+  height: 100%;
+  width: 100%;
   z-index: -1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   .staggerVisualizer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 10rem;
-    height: 10rem;
+    width: 25.5rem;
+    height: 25.5rem;
   
     div {
-      width: 0.58rem;
-      height: 0.58rem;
-      border: 1px solid white;
-      background-color: white;
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 1px solid #A6C5ED;
+      background-color: #A6C5ED;
     }
   }
 }
