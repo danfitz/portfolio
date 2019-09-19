@@ -1,0 +1,33 @@
+header {
+  background: $headerColor;
+  height: 100vh;
+  text-align: center;
+}
+
+.siteMenu {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .siteIcon {
+    color: $boldColor;
+    font-size: 1.5rem;
+    font-family: $headingFont;
+    text-transform: lowercase;
+  }
+}
+
+.siteHeroContent {
+  padding-top: 25vh;
+
+  .siteHeading,
+  .siteDescription {
+    margin: 0;
+  }
+
+  .siteHeading {
+    margin-bottom: 2rem;
+  }
+}
+
