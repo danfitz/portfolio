@@ -6,7 +6,7 @@
 // ===== GENERAL =====
 
 html {
-  font-size: 125%;
+  font-size: 125%; // defaults to 20px for most browsers
   overflow-x: hidden;
 }
 
@@ -21,6 +21,10 @@ body {
   margin: 0 auto;
 }
 
+img {
+  width: 100%;
+}
+
 
 @include largePhonesAndUp {
   .wrapper {
@@ -32,3 +36,4 @@ body {
 
 @import "partials/header";
 @import "partials/footer";
+@import "partials/projectsCarousel";
