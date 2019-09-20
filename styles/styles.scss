@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background: $bodyColor;
+  background: $mainColor;
   overflow-x: hidden;
 }
 
@@ -23,6 +23,7 @@ body {
 
 img {
   width: 100%;
+  display: block;
 }
 
 
@@ -36,4 +37,4 @@ img {
 
 @import "partials/header";
 @import "partials/footer";
-@import "partials/projectsCarousel";
+@import "partials/projectsList";

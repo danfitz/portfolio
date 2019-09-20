@@ -195,12 +195,13 @@ h1 {
   line-height: 3.2rem;
 }
 
-h2 {
-  font-size: 1.2rem;
+h2, h3 {
+  font-size: 1.6rem;
+  line-height: 1.5rem;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 ul {
@@ -245,6 +246,7 @@ body {
 
 img {
   width: 100%;
+  display: block;
 }
 
 @media (min-width: 480px) {
@@ -349,25 +351,23 @@ footer {
   }
 }
 
-.projectsCarousel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: auto;
+.projectsList {
+  padding: 1rem 0;
 }
 
 .project {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 80vw;
-          flex: 0 0 80vw;
   text-align: center;
+  padding: 1rem 0;
 }
 
-.projectText, .projectTools {
-  position: relative;
+.projectThumbnail {
+  background: #fff;
+  -webkit-box-shadow: 0 0 0.2rem 0.1rem #eee;
+          box-shadow: 0 0 0.2rem 0.1rem #eee;
 }
 
 .projectTools {
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,10 +380,18 @@ footer {
   margin-right: 0.5rem;
 }
 
-@media (min-width: 480px) {
-  .project {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 70vw;
-            flex: 0 0 70vw;
+@media (min-width: 768px) {
+  .projectsCarousel {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slick-center img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }

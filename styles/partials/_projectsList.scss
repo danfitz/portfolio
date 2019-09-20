@@ -1,0 +1,41 @@
+.projectsList {
+  padding: 1rem 0;
+}
+
+.project {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.projectThumbnail {
+  background: $footerColor;
+  box-shadow: $shadow;
+}
+
+.projectTools {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+
+  .tool:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}
+
+// @include largePhonesAndUp {
+//   .projectWrapper {
+//     flex: 0 0 25rem;
+//   }
+// }
+
+@include tabletsAndUp {
+  .projectsCarousel {
+    flex-direction: row;
+  }
+}
+
+@include desktopsAndUp {
+  .slick-center img {
+    transform: scale(1.1);
+  }
+}
