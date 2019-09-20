@@ -1,0 +1,46 @@
+footer {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialLinks {
+  margin: 0.5rem 0;
+  display: flex;
+
+  
+  li:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  a {
+    color: $fadedColor;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: $accentColor;
+  }
+
+  a:focus,
+  a:hover {
+    color: $boldColor;
+  }
+
+}
+
+.copyright {
+  margin: 0;
+}
+
+@include largePhonesAndUp {
+  footer {
+    padding: 2rem 0;
+  }
+}

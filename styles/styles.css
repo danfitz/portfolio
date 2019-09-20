@@ -180,6 +180,35 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
+html {
+  color: #595959;
+  font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3 {
+  color: #393939;
+  font-family: "Lora", serif;
+}
+
+h1 {
+  font-size: 4.25rem;
+  line-height: 3.2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 @-webkit-keyframes opacityShift {
   0% {
     opacity: 0.9;
@@ -198,43 +227,13 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   }
 }
 
-* {
-  color: #333;
-}
-
-h1 {
-  margin-bottom: 0;
-  font-family: "Reenie Beanie", cursive;
-  font-size: 4rem;
-  text-transform: uppercase;
-  color: #222;
-}
-
-h2, p {
-  font-family: "Archivo Narrow", sans-serif;
-}
-
-h2 {
-  font-size: 1.2rem;
-}
-
-p {
-  font-size: 1rem;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   font-size: 125%;
   overflow-x: hidden;
 }
 
 body {
-  background-color: white;
+  background: #f9f9f9;
   overflow-x: hidden;
 }
 
@@ -244,85 +243,57 @@ body {
   margin: 0 auto;
 }
 
+@media (min-width: 480px) {
+  .wrapper {
+    width: 70%;
+  }
+}
+
 header {
-  position: relative;
-  margin: 2rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background: #f5f2f1;
+  height: 100vh;
   text-align: center;
 }
 
-header .siteProfile {
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center 30%;
-     object-position: center 30%;
-}
-
-header .siteTitle {
-  margin: 3rem 0 0;
-}
-
-header .siteDescription {
-  margin: 0 0 3rem;
-}
-
-header #comingSoonTyped {
-  color: #222;
-  font-size: 1rem;
-  font-family: "Archivo Narrow", sans-serif;
-}
-
-header .socialLinks {
-  margin-top: 3rem;
+.siteMenu {
+  padding: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header .socialLinks li:nth-child(2) {
-  margin: 0 1rem;
+.siteIcon {
+  color: #393939;
+  font-size: 2.39rem;
+  font-family: "Lora", serif;
+  text-transform: lowercase;
 }
 
-header .blogLink {
-  font-family: "Reenie Beanie", cursive;
-  text-transform: uppercase;
+.siteHeroContent {
+  padding-top: 25vh;
 }
 
-header .socialLinks a {
-  color: #333;
-  text-decoration: none;
+.siteHeroContent .siteHeading,
+.siteHeroContent .siteDescription {
+  margin: 0;
 }
 
-header .socialLinks a:visited {
-  color: #333;
+.siteHeroContent .siteHeading {
+  margin-bottom: 2rem;
 }
 
-header .socialLinks a:hover, header .socialLinks a:focus,
-header .socialLinks i:hover, header .socialLinks i:focus {
-  color: black;
+footer {
+  padding: 1rem 0;
+  text-align: center;
 }
 
-.staggerContainer {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
+.footerWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,25 +309,37 @@ header .socialLinks i:hover, header .socialLinks i:focus {
           align-items: center;
 }
 
-.staggerContainer .staggerVisualizer {
+.socialLinks {
+  margin: 0.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 25.5rem;
-  height: 25.5rem;
 }
 
-.staggerContainer .staggerVisualizer div {
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 1px solid #A6C5ED;
-  background-color: #A6C5ED;
+.socialLinks li:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.socialLinks a {
+  color: #999;
+  text-decoration: none;
+}
+
+.socialLinks a:visited {
+  color: #bcaaa4;
+}
+
+.socialLinks a:focus,
+.socialLinks a:hover {
+  color: #393939;
+}
+
+.copyright {
+  margin: 0;
+}
+
+@media (min-width: 480px) {
+  footer {
+    padding: 2rem 0;
+  }
 }

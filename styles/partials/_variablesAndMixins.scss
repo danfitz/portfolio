@@ -1,0 +1,35 @@
+// ===== VARIABLES =====
+
+// Font variables
+$headingFont: "Lora", serif;
+$baseFont: "Poppins", sans-serif;
+
+// Font colour variables
+$baseColor: #595959;
+$boldColor: #393939;
+$accentColor: #bcaaa4;
+$fadedColor: #999;
+
+// Background colour variables
+$headerColor: #f5f2f1;
+$bodyColor: #f9f9f9;
+$footerColor: #fff;
+
+
+// ===== MIXINS =====
+
+@mixin largePhonesAndUp {
+  @media (min-width: 480px) { @content; }
+}
+
+@mixin tabletsAndUp {
+  @media (min-width: 768px) { @content; }
+}
+
+@mixin desktopsAndUp {
+  @media (min-width: 1024px) { @content; }
+}
+
+@mixin largeDesktopsAndUp {
+  @media (min-width: 1280px) { @content; }
+}
