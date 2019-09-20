@@ -1,67 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dan Fitz</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:700|Poppins:300&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dan Fitz</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Lora:700|Poppins:300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="headerWrapper wrapper">
-          <nav class="siteMenu">
-            <div class="siteIcon">
-              Dan Fitz
-            </div>
-            <div class="menuIcon">
-              <i class="fas fa-bars" aria-hidden></i>
-              <span class="sr-only">Menu</span>
-            </div>
-          </nav>
-          
-          <div class="siteHeroContent">
-            <h1 class="siteHeading">Dan Fitz</h1>
-            <p class="siteDescription">Front-end Developer</p>
-          </div>
-        </div>
-      </header>
-
-      <main>
-      </main>
-      
-      <footer>
-        <div class="footerWrapper wrapper">
+  <header>
+      <div class="headerWrapper wrapper">
+        <nav class="siteMenu">
           <div class="siteIcon">
             Dan Fitz
           </div>
-
-          <ul class="socialLinks">
-            <li><a href="https://github.com/danielfitz" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github" aria-hidden></i>
-                <span class="sr-only">Github</span>
-            </a></li>
-            <li><a href="https://twitter.com/_danfitz" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-twitter" aria-hidden></i>
-                <span class="sr-only">Twitter</span>
-            </a></li>
-            <li><a href="https://linkedin.com/dan-fitz" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-linkedin" aria-hidden></i>
-              <span class="sr-only">LinkedIn</span>
-            </a></li>
-            <li class='blogLink'><a href="https://blog.danfitz.com" target="_blank" rel="noopener noreferrer">
-                Blog
-            </a></li>
-          </ul>
-
-          <p class="copyright">Copyright © 2019. All rights are reserved.</p>
+          <div class="menuIcon">
+            <i class="fas fa-bars" aria-hidden></i>
+            <span class="sr-only">Menu</span>
+          </div>
+        </nav>
+        
+        <div class="siteHeroContent">
+          <h1 class="siteHeading">Dan Fitz</h1>
+          <p class="siteDescription">Front-end Developer</p>
         </div>
-    </footer>
+      </div>
+    </header>
 
-    <!-- jQuery -->
-    <script src='https://code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous'></script>
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/94656c5317.js"></script>
+    <main>
+      <ul class="projectsCarousel">
+        <li class="project">
+          <div class="projectText">
+            <h3 class="projectName">Project Name</h3>
+            <p class="projectDescription">This project does something and then something else, so try it out.</p>
+          </div>
+          <div class="projectThumbnail">
+            <img src="http://placekitten.com/408/287" alt="">
+          </div>
+          <ul class="projectTools">
+            <li class="sr-only">Tools used for project</li>
+            <li class="tool">
+              <i class="fab fa-react" aria-hidden></i>
+              <span class="sr-only">React</span>
+            </li>
+            <li class="tool">
+              <i class="fab fa-js" aria-hidden></i>
+              <span class="sr-only">JavaScript</span>
+            </li>
+            <li class="tool">
+              <i class="fab fa-css3" aria-hidden></i>
+              <span class="sr-only">CSS3</span>
+            </li>
+            <li class="tool">
+              <i class="fab fa-html5" aria-hidden></i>
+              <span class="sr-only">HTML5</span>
+            </li>
+            <li class="tool">
+              <i class="fab fa-sass" aria-hidden></i>
+              <span class="sr-only">Sass</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </main>
+    
+    <footer>
+      <div class="footerWrapper wrapper">
+        <div class="siteIcon">
+          Dan Fitz
+        </div>
+
+        <ul class="socialLinks">
+          <li><a href="https://github.com/danfitz" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github" aria-hidden></i>
+            <span class="sr-only">GitHub</span>
+          </a></li>
+          <li><a href="https://twitter.com/_danfitz" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter" aria-hidden></i>
+            <span class="sr-only">Twitter</span>
+          </a></li>
+          <li><a href="https://linkedin.com/dan-fitz" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin" aria-hidden></i>
+            <span class="sr-only">LinkedIn</span>
+          </a></li>
+          <li class='blogLink'><a href="https://blog.danfitz.com" target="_blank" rel="noopener noreferrer">
+            Blog
+          </a></li>
+        </ul>
+
+        <p class="copyright">Copyright © 2019. All rights are reserved.</p>
+      </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous'></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/94656c5317.js"></script>
 </body>
 </html>
