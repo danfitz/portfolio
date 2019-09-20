@@ -4,7 +4,17 @@
 
 .project {
   text-align: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
+}
+
+.projectText {
+  .projectName {
+    margin: 0;
+  }
+
+  .projectDescription {
+    margin: 1.5rem 0;
+  }
 }
 
 .projectThumbnail {
@@ -14,6 +24,7 @@
 
 .projectTools {
   margin-top: 1rem;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
 

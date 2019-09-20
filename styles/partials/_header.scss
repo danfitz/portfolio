@@ -9,7 +9,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 // TODO: Applies to more than just header! Needs to move!
@@ -18,6 +17,7 @@ header {
   font-size: 2.39rem;
   // font-size: 1.5rem;
   font-family: $headingFont;
+  font-weight: 700;
   text-transform: lowercase;
 }
 
