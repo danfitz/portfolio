@@ -26,12 +26,14 @@ footer {
   }
 
   a:visited {
-    color: $accentColor;
+    // color: $accentColor;
+    // color: $boldColor;
   }
 
   a:focus,
   a:hover {
-    color: $boldColor;
+    // color: $boldColor;
+    color: $accentColor;
   }
 
 }

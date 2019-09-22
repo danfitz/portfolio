@@ -1,40 +1,14 @@
+// ===== RESOURCE PARTIALS =====
+
 @import "partials/setup";
 @import "partials/variablesAndMixins";
 @import "partials/typography";
 @import "partials/animations";
 
-// ===== GENERAL =====
-
-html {
-  font-size: 125%; // defaults to 20px for most browsers
-  overflow-x: hidden;
-}
-
-body {
-  background: $mainColor;
-  overflow-x: hidden;
-}
-
-.wrapper {
-  width: 80%;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-img {
-  width: 100%;
-  display: block;
-}
-
-
-@include largePhonesAndUp {
-  .wrapper {
-    width: 70%;
-  }
-}
 
 // ===== CONTENT PARTIALS =====
 
+@import "partials/global";
 @import "partials/header";
 @import "partials/footer";
 @import "partials/projectsList";

@@ -250,6 +250,30 @@ img {
   display: block;
 }
 
+.buttonLink {
+  text-decoration: none;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.1rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  background: #393939;
+  border: none;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+button:hover, button:focus {
+  -webkit-box-shadow: 0 0 0 0.1rem #393939 inset;
+          box-shadow: 0 0 0 0.1rem #393939 inset;
+  background: none;
+  color: #393939;
+}
+
 @media (min-width: 480px) {
   .wrapper {
     width: 70%;
@@ -276,7 +300,7 @@ header {
 }
 
 .siteIcon {
-  color: #393939;
+  color: #566D9F;
   font-size: 2.39rem;
   font-family: "Lora", serif;
   font-weight: 700;
@@ -330,17 +354,13 @@ footer {
 }
 
 .socialLinks a {
-  color: #999;
+  color: #727272;
   text-decoration: none;
-}
-
-.socialLinks a:visited {
-  color: #bcaaa4;
 }
 
 .socialLinks a:focus,
 .socialLinks a:hover {
-  color: #393939;
+  color: #566D9F;
 }
 
 .copyright {
@@ -377,7 +397,7 @@ footer {
 }
 
 .projectTools {
-  margin-top: 1rem;
+  margin: 1rem 0;
   font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -389,6 +409,11 @@ footer {
 
 .projectTools .tool:not(:last-child) {
   margin-right: 0.5rem;
+}
+
+.projectTools span {
+  display: block;
+  font-size: 0.5rem;
 }
 
 @media (min-width: 768px) {
