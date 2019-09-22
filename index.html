@@ -27,6 +27,23 @@
         <div class="siteHeroContent">
           <h1 class="siteHeading">Dan Fitz</h1>
           <p class="siteDescription">Front-end Developer</p>
+          <ul class="socialLinks">
+            <li><a href="https://github.com/danfitz" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <span class="sr-only">GitHub</span>
+              </a></li>
+            <li><a href="https://twitter.com/_danfitz" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+                <span class="sr-only">Twitter</span>
+              </a></li>
+            <li><a href="https://linkedin.com/in/dan-fitz" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                <span class="sr-only">LinkedIn</span>
+              </a></li>
+            <li class='blogLink'><a href="https://blog.danfitz.com" target="_blank" rel="noopener noreferrer">
+                Blog
+              </a></li>
+          </ul>
         </div>
       </div>
     </header>
@@ -199,6 +216,49 @@
           
         </ul>
       </section>
+
+      <section class="contactSection wrapper">
+        <h2>Contact Me</h2>
+
+        <ul class="contactOptions">
+          <li>
+            <h3>Tweet Me</h3>
+            <a class="buttonLink" href="https://twitter.com/_danfitz" tabindex="-1">
+              <button>
+                <i class="fab fa-twitter" aria-hidden="true"></i> @_danfitz
+              </button>
+            </a>
+          </li>
+          <li>
+            <h3>Email Me</h3>
+            <a class="buttonLink" href="mailto:dan@danfitz.com" tabindex="-1">
+              <button>
+                <i class="fas fa-envelope" aria-hidden="true"></i> dan@danfitz.com
+              </button>
+            </a>
+          </li>
+        </ul>
+
+        <form class="contactForm clearfix" action="https://formspree.io/dan@danfitz.com" method="POST">
+          <h3>Message Me</h3>
+          <div class="inputContainer">
+            <input type="text" name="name" id="name" placeholder="Your Name">
+            <label for="name">Your Name</label>
+          </div>
+  
+          <div class="inputContainer">
+            <input type="email" name="email" id="email" placeholder="Your Email Address" required>
+            <label for="email">Your Email Address</label>
+          </div>
+  
+          <div class="inputContainer">
+            <textarea name="message" id="message" rows="5" placeholder="Your Message"></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+
     </main>
     
     <footer>
