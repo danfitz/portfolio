@@ -1,0 +1,51 @@
+// ===== GENERAL =====
+
+html {
+  font-size: 125%; // defaults to 20px for most browsers
+  overflow-x: hidden;
+}
+
+body {
+  background: $mainColor;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.buttonLink {
+  text-decoration: none;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.1rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: $white;
+  background: $boldColor;
+  border: none;
+  transition: all 0.1s;
+  
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 0.15rem $boldColor inset;
+    background: none;
+    color: $boldColor;
+  }
+  }
+
+@include largePhonesAndUp {
+  .wrapper {
+    width: 70%;
+  }
+}

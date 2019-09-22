@@ -1,5 +1,6 @@
 footer {
   padding: 1rem 0;
+  background: $footerColor;
   text-align: center;
 }
 
@@ -14,7 +15,7 @@ footer {
   margin: 0.5rem 0;
   display: flex;
 
-  
+  // Spaces out social links
   li:not(:last-child) {
     margin-right: 0.5rem;
   }
@@ -25,12 +26,14 @@ footer {
   }
 
   a:visited {
-    color: $accentColor;
+    // color: $accentColor;
+    // color: $boldColor;
   }
 
   a:focus,
   a:hover {
-    color: $boldColor;
+    // color: $boldColor;
+    color: $accentColor;
   }
 
 }
