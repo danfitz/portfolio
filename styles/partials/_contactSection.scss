@@ -1,0 +1,93 @@
+.contactSection {
+  padding: 2rem 0;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+// ===== Contact Options =====
+
+.contactOptions {
+  a {
+    color: $accentColor;
+    text-decoration: none;
+  }
+
+  li {
+    margin-bottom: 3rem;
+  }
+}
+
+// ===== Contact Form =====
+
+.inputContainer {
+  position: relative;
+
+  label {
+    position: absolute;
+    left: 0;
+    top: -0.5rem;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 1.7rem;
+  padding: 0.8rem;
+  padding-left: 1rem;
+  background: none;
+  border: 0.1rem solid $fadedColor;
+}
+
+textarea {
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: $fadedColor;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: $shadow;
+}
+
+input:focus + label,
+textarea:focus + label {
+  opacity: 1;
+  top: -1.3rem;
+}
+
+button[type="submit"] {
+  float: right;
+}
+
+@include tabletsAndUp {
+  .contactSection {
+    display: flex;
+    flex-wrap: wrap;
+
+    h2 {
+      flex: 0 0 100%;
+    }
+  }
+
+  .contactOptions {
+    margin-right: 2rem;
+  }
+
+  .contactForm {
+    flex: 1 1 auto;
+  }
+}
+
+@include desktopsAndUp {
+  .contactOptions {
+    margin-right: 5rem;
+  }
+}

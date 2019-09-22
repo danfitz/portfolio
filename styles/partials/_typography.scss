@@ -1,4 +1,5 @@
 html {
+  font-size: 125%; // defaults to 20px for most browsers
   color: $baseColor;
   font-family: $baseFont;
 }
@@ -32,4 +33,10 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+@include tabletsAndUp {
+  html {
+    font-size: 100%;
+  }
 }

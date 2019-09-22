@@ -1,7 +1,6 @@
 // ===== GENERAL =====
 
 html {
-  font-size: 125%; // defaults to 20px for most browsers
   overflow-x: hidden;
 }
 
@@ -21,6 +20,14 @@ img {
   display: block;
 }
 
+@include largePhonesAndUp {
+  .wrapper {
+    width: 70%;
+  }
+}
+
+// ===== BUTTONS =====
+
 .buttonLink {
   text-decoration: none;
 }
@@ -30,22 +37,17 @@ button {
   margin: 0.1rem;
   font-size: 0.8rem;
   line-height: 1rem;
+  letter-spacing: 0.12rem;
   text-transform: uppercase;
   color: $white;
   background: $boldColor;
   border: none;
-  transition: all 0.1s;
+  transition: all 0.3s;
   
   &:hover,
   &:focus {
     box-shadow: 0 0 0 0.15rem $boldColor inset;
     background: none;
     color: $boldColor;
-  }
-  }
-
-@include largePhonesAndUp {
-  .wrapper {
-    width: 70%;
   }
 }
