@@ -14,6 +14,10 @@ footer {
 .socialLinks {
   margin: 0.5rem 0;
   display: flex;
+  
+  @include tabletsAndUp {
+    font-size: 1.3rem;
+  }
 
   // Spaces out social links
   li:not(:last-child) {
