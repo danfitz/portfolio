@@ -195,7 +195,12 @@ h1 {
   line-height: 3.2rem;
 }
 
-h2, h3 {
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.2rem;
+}
+
+h3 {
   font-size: 1.6rem;
   line-height: 1.5rem;
 }
@@ -261,17 +266,17 @@ button {
   line-height: 1rem;
   text-transform: uppercase;
   color: #fff;
-  background: #566D9F;
+  background: #393939;
   border: none;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
 
 button:hover, button:focus {
-  -webkit-box-shadow: 0 0 0 0.1rem #566D9F inset;
-          box-shadow: 0 0 0 0.1rem #566D9F inset;
+  -webkit-box-shadow: 0 0 0 0.15rem #393939 inset;
+          box-shadow: 0 0 0 0.15rem #393939 inset;
   background: none;
-  color: #566D9F;
+  color: #393939;
 }
 
 @media (min-width: 480px) {
@@ -373,12 +378,12 @@ footer {
   }
 }
 
-.projectsList {
+.projectsSection {
   padding: 1rem 0;
+  text-align: center;
 }
 
 .project {
-  text-align: center;
   padding: 2rem 0;
 }
 
@@ -396,8 +401,8 @@ footer {
 
 .projectThumbnail {
   background: #fff;
-  -webkit-box-shadow: 0 0 0.2rem 0.1rem #eee;
-          box-shadow: 0 0 0.2rem 0.1rem #eee;
+  -webkit-box-shadow: 0 0 0.2rem 0.15rem #eee;
+          box-shadow: 0 0 0.2rem 0.15rem #eee;
 }
 
 .projectThumbnail video {
@@ -406,7 +411,7 @@ footer {
 }
 
 .projectTools {
-  margin-top: 0.5rem;
+  margin: 0.5rem 0;
   font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -434,4 +439,51 @@ footer {
 .projectTools span {
   display: block;
   font-size: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .project {
+    width: 100%;
+    max-width: 2000px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+  }
+  .project:not(:last-child) {
+    margin-bottom: -3rem;
+  }
+  .project .projectThumbnail {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .project .projectTools {
+    margin: 1rem 0;
+  }
+  .projectCard {
+    -webkit-box-shadow: 0 0 0.2rem 0.15rem #eee;
+            box-shadow: 0 0 0.2rem 0.15rem #eee;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .projectCard:first-child {
+    padding: 1rem;
+  }
+  .project:nth-child(even) .projectCard:first-child {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+  }
 }

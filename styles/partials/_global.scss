@@ -32,15 +32,15 @@ button {
   line-height: 1rem;
   text-transform: uppercase;
   color: $white;
-  background: $accentColor;
+  background: $boldColor;
   border: none;
   transition: all 0.1s;
   
   &:hover,
   &:focus {
-    box-shadow: 0 0 0 0.1rem $accentColor inset;
+    box-shadow: 0 0 0 0.15rem $boldColor inset;
     background: none;
-    color: $accentColor;
+    color: $boldColor;
   }
   }
 

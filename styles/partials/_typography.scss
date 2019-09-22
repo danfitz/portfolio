@@ -13,8 +13,12 @@ h1 {
   line-height: 3.2rem;
 }
 
-// Will need to be split into 2 declarations
-h2, h3 {
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.2rem;
+}
+
+h3 {
   font-size: 1.6rem;
   line-height: 1.5rem;
 }
