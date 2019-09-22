@@ -23,13 +23,22 @@ header {
 
 .siteHeroContent {
   padding-top: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .siteHeading,
   .siteDescription {
     margin: 0;
   }
-
+  
   .siteHeading {
     margin-bottom: 2rem;
+  }
+}
+
+@include tabletsAndUp {
+  .siteDescription {
+    font-size: 1.3rem;
   }
 }
