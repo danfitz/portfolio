@@ -13,17 +13,27 @@
   }
 
   .projectDescription {
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 0;
   }
+}
+
+.projectLinks {
+  margin: 1rem 0 1.2rem;
 }
 
 .projectThumbnail {
   background: $footerColor;
   box-shadow: $shadow;
+  // padding: 1rem;
+
+  video {
+    width: 100%;
+    display: block;
+  }
 }
 
 .projectTools {
-  margin: 1rem 0;
+  margin-top: 0.5rem;
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
@@ -32,26 +42,20 @@
     margin-right: 0.5rem;
   }
 
+  .tool {
+    transition: all 0.1s;
+  }
+
+  .tool:hover {
+    transform: scale(1.05);
+    color: $boldColor;
+  }
+
   span {
     display: block;
     font-size: 0.5rem;
   }
 }
 
-// @include largePhonesAndUp {
-//   .projectWrapper {
-//     flex: 0 0 25rem;
-//   }
-// }
-
 @include tabletsAndUp {
-  .projectsCarousel {
-    flex-direction: row;
-  }
-}
-
-@include desktopsAndUp {
-  .slick-center img {
-    transform: scale(1.1);
-  }
 }

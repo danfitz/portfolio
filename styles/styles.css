@@ -261,17 +261,17 @@ button {
   line-height: 1rem;
   text-transform: uppercase;
   color: #fff;
-  background: #393939;
+  background: #566D9F;
   border: none;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
 
 button:hover, button:focus {
-  -webkit-box-shadow: 0 0 0 0.1rem #393939 inset;
-          box-shadow: 0 0 0 0.1rem #393939 inset;
+  -webkit-box-shadow: 0 0 0 0.1rem #566D9F inset;
+          box-shadow: 0 0 0 0.1rem #566D9F inset;
   background: none;
-  color: #393939;
+  color: #566D9F;
 }
 
 @media (min-width: 480px) {
@@ -387,7 +387,11 @@ footer {
 }
 
 .projectText .projectDescription {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 0;
+}
+
+.projectLinks {
+  margin: 1rem 0 1.2rem;
 }
 
 .projectThumbnail {
@@ -396,8 +400,13 @@ footer {
           box-shadow: 0 0 0.2rem 0.1rem #eee;
 }
 
+.projectThumbnail video {
+  width: 100%;
+  display: block;
+}
+
 .projectTools {
-  margin: 1rem 0;
+  margin-top: 0.5rem;
   font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,23 +420,18 @@ footer {
   margin-right: 0.5rem;
 }
 
+.projectTools .tool {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.projectTools .tool:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: #393939;
+}
+
 .projectTools span {
   display: block;
   font-size: 0.5rem;
-}
-
-@media (min-width: 768px) {
-  .projectsCarousel {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media (min-width: 1024px) {
-  .slick-center img {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
 }
