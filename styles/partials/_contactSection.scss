@@ -3,6 +3,7 @@
 
   h2 {
     text-align: center;
+    margin-bottom: 6rem;
   }
 }
 
@@ -41,6 +42,7 @@ input, textarea {
   padding-left: 1rem;
   background: none;
   border: 0.1rem solid $fadedColor;
+  border-radius: 0;
 }
 
 textarea {

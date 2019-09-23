@@ -199,6 +199,45 @@ h1 {
 h2 {
   font-size: 2.5rem;
   line-height: 2.2rem;
+  position: relative;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  height: 0.2rem;
+  background: #bcaaa4;
+  bottom: -1rem;
+  left: calc(50% - 2rem);
+  -webkit-animation: expandIn 0.2s forwards;
+          animation: expandIn 0.2s forwards;
+}
+
+@-webkit-keyframes expandIn {
+  from {
+    width: 0;
+    height: 0;
+    left: 50%;
+  }
+  to {
+    width: 4rem;
+    height: 0.2rem;
+    left: calc(50% - 2rem);
+  }
+}
+
+@keyframes expandIn {
+  from {
+    width: 0;
+    height: 0;
+    left: 50%;
+  }
+  to {
+    width: 4rem;
+    height: 0.2rem;
+    left: calc(50% - 2rem);
+  }
 }
 
 h3 {
@@ -215,12 +254,6 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 115%;
-  }
 }
 
 @-webkit-keyframes opacityShift {
@@ -327,7 +360,7 @@ header {
 }
 
 .siteIcon {
-  color: #385078;
+  color: #393939;
   font-size: 2.39rem;
   font-family: "Lora", serif;
   font-weight: 700;
@@ -412,7 +445,7 @@ footer {
 
 .socialLinks a:focus,
 .socialLinks a:hover {
-  color: #385078;
+  color: #bcaaa4;
 }
 
 .copyright {
@@ -427,11 +460,12 @@ footer {
 
 .aboutSection h2 {
   text-align: center;
+  margin-bottom: 5rem;
 }
 
 .biography {
   margin-top: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
 }
 
 .skills {
@@ -440,9 +474,9 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .skill {
@@ -480,12 +514,12 @@ footer {
   text-align: center;
 }
 
-.project {
-  padding: 2rem 0;
+.projectsSection h2 {
+  margin-bottom: 4rem;
 }
 
-.projectCard {
-  background: #fff;
+.project {
+  padding: 2rem 0;
 }
 
 .projectText .projectName {
@@ -539,7 +573,7 @@ footer {
 
 .projectTools span {
   display: block;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
 }
 
 @media (min-width: 768px) {
@@ -550,10 +584,10 @@ footer {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1.5rem;
+    grid-column-gap: 0.25rem;
   }
   .project:not(:last-child) {
-    margin-bottom: -2.5rem;
+    margin-bottom: -3.75rem;
   }
   .project .projectThumbnail {
     -webkit-box-shadow: none;
@@ -563,6 +597,8 @@ footer {
     margin: 1rem 0;
   }
   .projectCard {
+    height: calc(50vw - 0.125rem);
+    background: #fff;
     -webkit-box-shadow: 0 0 0.2rem 0.15rem #eee;
             box-shadow: 0 0 0.2rem 0.15rem #eee;
     display: -webkit-box;
@@ -591,10 +627,11 @@ footer {
 
 .contactSection h2 {
   text-align: center;
+  margin-bottom: 6rem;
 }
 
 .contactOptions a {
-  color: #385078;
+  color: #bcaaa4;
   text-decoration: none;
 }
 
@@ -623,6 +660,7 @@ input, textarea {
   padding-left: 1rem;
   background: none;
   border: 0.1rem solid #727272;
+  border-radius: 0;
 }
 
 textarea {
