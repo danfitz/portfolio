@@ -298,7 +298,7 @@ main > * {
   padding: 3rem 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .wrapper {
     width: 70%;
   }
@@ -329,6 +329,14 @@ button:hover, button:focus {
   color: #393939;
 }
 
+.siteIcon {
+  color: #393939;
+  font-size: 2.39rem;
+  font-family: "Lora", serif;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
 header {
   height: 100vh;
   min-height: 25rem;
@@ -357,14 +365,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.siteIcon {
-  color: #393939;
-  font-size: 2.39rem;
-  font-family: "Lora", serif;
-  font-weight: 700;
-  text-transform: lowercase;
 }
 
 .siteHeroContent {
@@ -531,22 +531,38 @@ footer {
 }
 
 .projectLinks {
-  margin: 1rem 0 1.2rem;
+  margin: 1rem 0;
 }
 
 .projectThumbnail {
   background: #fff;
   -webkit-box-shadow: 0 0 0.2rem 0.15rem #eee;
           box-shadow: 0 0 0.2rem 0.15rem #eee;
+  padding: 1.5rem 0.5rem;
+  position: relative;
 }
 
-.projectThumbnail video {
-  width: 100%;
-  display: block;
+.projectThumbnail img {
+  position: relative;
+  z-index: 50;
+}
+
+.projectThumbnail::after {
+  content: "";
+  position: absolute;
+  z-index: 40;
+  bottom: 1.6rem;
+  width: 54%;
+  left: 30%;
+  height: 0.3rem;
+  background: #727272;
+  -webkit-box-shadow: 0 0 1rem 0.5rem #727272;
+          box-shadow: 0 0 1rem 0.5rem #727272;
+  border-radius: 10rem;
 }
 
 .projectTools {
-  margin: 0.5rem 0;
+  margin-bottom: 1rem;
   font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -578,8 +594,6 @@ footer {
 
 @media (min-width: 768px) {
   .project {
-    width: 100%;
-    max-width: 2000px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
@@ -589,15 +603,15 @@ footer {
   .project:not(:last-child) {
     margin-bottom: -3.75rem;
   }
-  .project .projectThumbnail {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  .project .projectTools {
-    margin: 1rem 0;
+  .project:nth-child(even) .projectCard:first-child {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
   }
   .projectCard {
-    height: calc(50vw - 0.125rem);
     background: #fff;
     -webkit-box-shadow: 0 0 0.2rem 0.15rem #eee;
             box-shadow: 0 0 0.2rem 0.15rem #eee;
@@ -613,15 +627,30 @@ footer {
             justify-content: center;
   }
   .projectCard:first-child {
-    padding: 1rem;
+    padding: 2rem;
   }
-  .project:nth-child(even) .projectCard:first-child {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / 2;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / 3;
+  .projectThumbnail {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 90%;
+  }
+  .projectTools {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projectCard:first-child {
+    padding: 3rem;
+  }
+  .projectThumbnail {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .projectCard:first-child {
+    padding: 4rem;
   }
 }
 

@@ -21,21 +21,36 @@
 }
 
 .projectLinks {
-  margin: 1rem 0 1.2rem;
+  margin: 1rem 0;
 }
 
 .projectThumbnail {
   background: $footerColor;
   box-shadow: $shadow;
+  padding: 1.5rem 0.5rem;
+  position: relative;
 
-  video {
-    width: 100%;
-    display: block;
+  img {
+    position: relative;
+    z-index: 50;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 40;
+    bottom: 1.6rem;
+    width: 54%;
+    left: 30%;
+    height: 0.3rem;
+    background: $fadedColor;
+    box-shadow: 0 0 1rem 0.5rem $fadedColor;
+    border-radius: 10rem;
   }
 }
 
 .projectTools {
-  margin: 0.5rem 0;
+  margin-bottom: 1rem;
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
@@ -61,35 +76,14 @@
 
 @include tabletsAndUp {
   .project {
-    width: 100%;
-    max-width: 2000px;
+    // width: 100%;
+    // max-width: 2000px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 0.25rem;
 
     &:not(:last-child) {
       margin-bottom: -3.75rem;
-    }
-    
-    .projectThumbnail {
-      box-shadow: none;
-    }
-
-    .projectTools {
-      margin: 1rem 0;
-    }
-  }
-  
-  .projectCard {
-    height: calc(50vw - 0.125rem);
-    background: $white;
-    box-shadow: $shadow;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    &:first-child {
-      padding: 1rem;
     }
   }
 
@@ -98,5 +92,41 @@
       grid-row: 1 / 2;
       grid-column: 2 / 3;
     }
+  }
+
+  .projectCard {
+    background: $white;
+    box-shadow: $shadow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:first-child {
+      padding: 2rem;
+    }
+  }
+
+  .projectThumbnail {
+    box-shadow: none;
+    width: 90%;
+  }
+
+  .projectTools {
+    margin: 0;
+  }
+}
+
+@include desktopsAndUp {
+  .projectCard:first-child {
+    padding: 3rem;
+  }
+  .projectThumbnail {
+    width: 70%;
+  }
+}
+
+@include largeDesktopsAndUp {
+  .projectCard:first-child {
+    padding: 4rem;
   }
 }

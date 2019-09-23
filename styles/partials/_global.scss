@@ -24,7 +24,7 @@ main > * {
   padding: 3rem 0;
 }
 
-@include tabletsAndUp {
+@include desktopsAndUp {
   .wrapper {
     width: 70%;
   }
@@ -54,4 +54,14 @@ button {
     background: none;
     color: $boldColor;
   }
+}
+
+// ===== OTHER =====
+
+.siteIcon {
+  color: $boldColor;
+  font-size: 2.39rem;
+  font-family: $headingFont;
+  font-weight: 700;
+  text-transform: lowercase;
 }
