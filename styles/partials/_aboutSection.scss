@@ -1,15 +1,20 @@
 .aboutSection {
-  padding: 2rem 0;
+  // padding: 2rem 0;
 
   h2 {
     text-align: center;
   }
 }
 
+.biography {
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+
 .skills {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .skill {
@@ -19,14 +24,25 @@
   
   .fas, .fab {
     font-size: 3rem;
+    color: $boldColor;
   }
 
   svg {
     width: 3rem;
+    fill: $boldColor;
   }
 
   span {
     margin-top: 0.8rem;
     display: block;
+  }
+
+  .textForSvg {
+    position: relative;
+    bottom: 0.435rem;
+  }
+
+  .jekyllIcon {
+    transform: scale(1.7);
   }
 }

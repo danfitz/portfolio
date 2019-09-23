@@ -10,7 +10,7 @@ body {
 }
 
 .wrapper {
-  width: 80%;
+  width: 90%;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -20,7 +20,11 @@ img {
   display: block;
 }
 
-@include largePhonesAndUp {
+main > * {
+  padding: 3rem 0;
+}
+
+@include tabletsAndUp {
   .wrapper {
     width: 70%;
   }

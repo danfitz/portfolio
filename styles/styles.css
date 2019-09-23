@@ -251,7 +251,7 @@ body {
 }
 
 .wrapper {
-  width: 80%;
+  width: 90%;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -261,7 +261,11 @@ img {
   display: block;
 }
 
-@media (min-width: 480px) {
+main > * {
+  padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
   .wrapper {
     width: 70%;
   }
@@ -294,7 +298,19 @@ button:hover, button:focus {
 
 header {
   height: 100vh;
+  min-height: 25rem;
   text-align: center;
+  position: relative;
+}
+
+.profileContainer {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: -1.5rem;
+  width: 35%;
+  max-width: 15rem;
+  opacity: 0.4;
 }
 
 .siteMenu {
@@ -345,18 +361,9 @@ header {
   .siteDescription {
     font-size: 1.3rem;
   }
-}
-
-header {
-  position: relative;
-}
-
-.profileContainer {
-  position: absolute;
-  z-index: -1;
-  width: 8rem;
-  bottom: 0;
-  right: -2.5rem;
+  .profileContainer {
+    right: 5%;
+  }
 }
 
 footer {
@@ -418,12 +425,13 @@ footer {
   }
 }
 
-.aboutSection {
-  padding: 2rem 0;
-}
-
 .aboutSection h2 {
   text-align: center;
+}
+
+.biography {
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
 }
 
 .skills {
@@ -432,9 +440,9 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .skill {
@@ -445,10 +453,12 @@ footer {
 
 .skill .fas, .skill .fab {
   font-size: 3rem;
+  color: #393939;
 }
 
 .skill svg {
   width: 3rem;
+  fill: #393939;
 }
 
 .skill span {
@@ -456,13 +466,26 @@ footer {
   display: block;
 }
 
+.skill .textForSvg {
+  position: relative;
+  bottom: 0.435rem;
+}
+
+.skill .jekyllIcon {
+  -webkit-transform: scale(1.7);
+          transform: scale(1.7);
+}
+
 .projectsSection {
-  padding: 1rem 0;
   text-align: center;
 }
 
 .project {
   padding: 2rem 0;
+}
+
+.projectCard {
+  background: #fff;
 }
 
 .projectText .projectName {
@@ -564,10 +587,6 @@ footer {
     -ms-grid-column-span: 1;
     grid-column: 2 / 3;
   }
-}
-
-.contactSection {
-  padding: 2rem 0;
 }
 
 .contactSection h2 {
