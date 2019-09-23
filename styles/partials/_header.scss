@@ -1,5 +1,4 @@
 header {
-  background: $headerColor;
   height: 100vh;
   text-align: center;
 }
@@ -41,4 +40,16 @@ header {
   .siteDescription {
     font-size: 1.3rem;
   }
+}
+
+header {
+  position: relative;
+}
+
+.profileContainer {
+  position: absolute;
+  z-index: -1;
+  width: 8rem;
+  bottom: 0;
+  right: -2.5rem;
 }

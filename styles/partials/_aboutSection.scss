@@ -1,0 +1,32 @@
+.aboutSection {
+  padding: 2rem 0;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill {
+  margin: 0.5rem 0;
+  width: 6rem;
+  text-align: center;
+  
+  .fas, .fab {
+    font-size: 3rem;
+  }
+
+  svg {
+    width: 3rem;
+  }
+
+  span {
+    margin-top: 0.8rem;
+    display: block;
+  }
+}

@@ -208,7 +208,7 @@ h3 {
 
 p {
   font-size: 0.9rem;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
 }
 
 ul {
@@ -219,7 +219,7 @@ ul {
 
 @media (min-width: 768px) {
   html {
-    font-size: 100%;
+    font-size: 115%;
   }
 }
 
@@ -293,7 +293,6 @@ button:hover, button:focus {
 }
 
 header {
-  background: #f5f2f1;
   height: 100vh;
   text-align: center;
 }
@@ -312,7 +311,7 @@ header {
 }
 
 .siteIcon {
-  color: #566D9F;
+  color: #385078;
   font-size: 2.39rem;
   font-family: "Lora", serif;
   font-weight: 700;
@@ -346,6 +345,18 @@ header {
   .siteDescription {
     font-size: 1.3rem;
   }
+}
+
+header {
+  position: relative;
+}
+
+.profileContainer {
+  position: absolute;
+  z-index: -1;
+  width: 8rem;
+  bottom: 0;
+  right: -2.5rem;
 }
 
 footer {
@@ -394,7 +405,7 @@ footer {
 
 .socialLinks a:focus,
 .socialLinks a:hover {
-  color: #566D9F;
+  color: #385078;
 }
 
 .copyright {
@@ -405,6 +416,44 @@ footer {
   footer {
     padding: 2rem 0;
   }
+}
+
+.aboutSection {
+  padding: 2rem 0;
+}
+
+.aboutSection h2 {
+  text-align: center;
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skill {
+  margin: 0.5rem 0;
+  width: 6rem;
+  text-align: center;
+}
+
+.skill .fas, .skill .fab {
+  font-size: 3rem;
+}
+
+.skill svg {
+  width: 3rem;
+}
+
+.skill span {
+  margin-top: 0.8rem;
+  display: block;
 }
 
 .projectsSection {
@@ -478,10 +527,10 @@ footer {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1rem;
+    grid-column-gap: 1.5rem;
   }
   .project:not(:last-child) {
-    margin-bottom: -3rem;
+    margin-bottom: -2.5rem;
   }
   .project .projectThumbnail {
     -webkit-box-shadow: none;
@@ -526,7 +575,7 @@ footer {
 }
 
 .contactOptions a {
-  color: #566D9F;
+  color: #385078;
   text-decoration: none;
 }
 
