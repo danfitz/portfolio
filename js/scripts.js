@@ -21,7 +21,7 @@ $.fn.isInViewport = function() {
   var viewportTop = $(window).scrollTop();
   var viewportBottom = viewportTop + $(window).height();
 
-  return elementBottom > viewportTop + ((viewportBottom - viewportTop) * 0.40) && elementTop < viewportBottom - ((viewportBottom - viewportTop) * 0.40);
+  return elementBottom > viewportTop + ((viewportBottom - viewportTop) * 0.5) && elementTop < viewportBottom - ((viewportBottom - viewportTop) * 0.5);
 };
 
 portfolio.init = function() {
@@ -30,14 +30,13 @@ portfolio.init = function() {
   $(window).on('resize scroll', function () {
     $(".focusable").each(function() {
       if ($(this).isInViewport()) {
-        console.log("HELLO");
         $(this).css({
-          "opacity": "1",
+          opacity: 1,
           bottom: 0
         });
       } else {
         $(this).css({
-          "opacity": "0.2",
+          opacity: 0.3,
           bottom: "-0.8rem"
         });
       };
