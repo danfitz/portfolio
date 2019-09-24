@@ -30,9 +30,9 @@ main > * {
   }
 }
 
-// ===== BUTTONS =====
+// ===== BUTTONS & ANCHORS =====
 
-.buttonLink {
+a {
   text-decoration: none;
 }
 
@@ -56,6 +56,34 @@ button {
   }
 }
 
+.anchorLink {
+  color: $baseColor;
+  position: relative;
+  font-weight: 600;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 0.4rem;
+    background: adjust-color($accentColor, $alpha: -0.6);
+    bottom: 0;
+    left: 10%;
+    transition: all 0.3s;
+  }
+
+  &:visited {
+    color: $baseColor;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    bottom: -0.2rem;
+    left: 0;
+    width: 100%;
+  }
+}
+
 // ===== OTHER =====
 
 .siteIcon {
@@ -67,8 +95,16 @@ button {
 }
 
 .focusable {
-  opacity: 0.3;
   position: relative;
-  bottom: -0.8rem;
   transition: all 0.5s;
+}
+
+.focused {
+  opacity: 1;
+  bottom: 0;
+}
+
+.unfocused {
+  opacity: 0.3;
+  bottom: -0.8rem;
 }

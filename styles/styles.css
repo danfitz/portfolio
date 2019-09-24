@@ -304,7 +304,7 @@ main > * {
   }
 }
 
-.buttonLink {
+a {
   text-decoration: none;
 }
 
@@ -329,6 +329,34 @@ button:hover, button:focus {
   color: #393939;
 }
 
+.anchorLink {
+  color: #595959;
+  position: relative;
+  font-weight: 600;
+}
+
+.anchorLink::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 0.4rem;
+  background: rgba(188, 170, 164, 0.4);
+  bottom: 0;
+  left: 10%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.anchorLink:visited {
+  color: #595959;
+}
+
+.anchorLink:hover::after, .anchorLink:focus::after {
+  bottom: -0.2rem;
+  left: 0;
+  width: 100%;
+}
+
 .siteIcon {
   color: #393939;
   font-size: 2.39rem;
@@ -338,11 +366,19 @@ button:hover, button:focus {
 }
 
 .focusable {
-  opacity: 0.3;
   position: relative;
-  bottom: -0.8rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.focused {
+  opacity: 1;
+  bottom: 0;
+}
+
+.unfocused {
+  opacity: 0.3;
+  bottom: -0.8rem;
 }
 
 header {
