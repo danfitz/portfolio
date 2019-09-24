@@ -94,17 +94,25 @@ button {
   text-transform: lowercase;
 }
 
-.focusable {
-  position: relative;
-  transition: all 0.5s;
-}
+.socialLinks {
+  margin: 0.5rem 0;
+  display: flex;
+  
+  @include tabletsAndUp {
+    font-size: 1.3rem;
+  }
 
-.focused {
-  opacity: 1;
-  bottom: 0;
-}
+  // Spaces out social links
+  li:not(:last-child) {
+    margin-right: 0.5rem;
+  }
 
-.unfocused {
-  opacity: 0.3;
-  bottom: -0.8rem;
+  a {
+    color: $fadedColor;
+  }
+
+  a:focus,
+  a:hover {
+    color: $accentColor;
+  }
 }

@@ -17,6 +17,7 @@ h1 {
 h2 {
   font-size: 2.5rem;
   line-height: 2.2rem;
+  text-align: center;
   position: relative;
 }
 
@@ -29,21 +30,21 @@ h2::before {
   // opacity: 0.8;
   bottom: -1rem;
   left: calc(50% - 2rem);
-  animation: expandIn 0.2s forwards;
+  // animation: expandIn 0.2s forwards;
 }
 
-@keyframes expandIn {
-  from {
-    width: 0;
-    height: 0;
-    left: 50%;
-  }
-  to {
-    width: 4rem;
-    height: 0.2rem;
-    left: calc(50% - 2rem);
-  }
-}
+// @keyframes expandIn {
+//   from {
+//     width: 0;
+//     height: 0;
+//     left: 50%;
+//   }
+//   to {
+//     width: 4rem;
+//     height: 0.2rem;
+//     left: calc(50% - 2rem);
+//   }
+// }
 
 h3 {
   font-size: 1.6rem;
@@ -61,8 +62,8 @@ ul {
   padding: 0;
 }
 
-@include tabletsAndUp {
-  html {
-    // font-size: 115%;
-  }
-}
+// @include tabletsAndUp {
+//   html {
+//     font-size: 115%;
+//   }
+// }

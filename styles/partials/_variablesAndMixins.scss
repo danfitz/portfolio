@@ -40,14 +40,3 @@ $footerColor: #fff;
 @mixin largeDesktopsAndUp {
   @media (min-width: 1280px) { @content; }
 }
-
-@mixin responsiveSize($type, $minSize, $maxSize, $minScreen: 320, $maxScreen: 1280) {
-  @if $type == "font" {
-    font-size: calc(#{$minSize}px + ($maxSize - $minSize) * ((100vw - #{$minScreen}px) / ($maxScreen - $minScreen)));
-  }
-
-  @if $type == "width" {
-    width: calc(#{$minSize}px + (#{$maxSize} - #{$minSize}) * ((100vw - #{$minScreen}px) / (#{$maxScreen} - #{$minScreen})));
-    // width: 500px;
-  }
-}

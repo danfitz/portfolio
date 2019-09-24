@@ -199,6 +199,7 @@ h1 {
 h2 {
   font-size: 2.5rem;
   line-height: 2.2rem;
+  text-align: center;
   position: relative;
 }
 
@@ -210,34 +211,6 @@ h2::before {
   background: #bcaaa4;
   bottom: -1rem;
   left: calc(50% - 2rem);
-  -webkit-animation: expandIn 0.2s forwards;
-          animation: expandIn 0.2s forwards;
-}
-
-@-webkit-keyframes expandIn {
-  from {
-    width: 0;
-    height: 0;
-    left: 50%;
-  }
-  to {
-    width: 4rem;
-    height: 0.2rem;
-    left: calc(50% - 2rem);
-  }
-}
-
-@keyframes expandIn {
-  from {
-    width: 0;
-    height: 0;
-    left: 50%;
-  }
-  to {
-    width: 4rem;
-    height: 0.2rem;
-    left: calc(50% - 2rem);
-  }
 }
 
 h3 {
@@ -256,22 +229,20 @@ ul {
   padding: 0;
 }
 
-@-webkit-keyframes opacityShift {
-  0% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 1;
-  }
+.focusable {
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-@keyframes opacityShift {
-  0% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 1;
-  }
+.focused {
+  opacity: 1;
+  bottom: 0;
+}
+
+.unfocused {
+  opacity: 0.3;
+  bottom: -0.8rem;
 }
 
 html {
@@ -365,28 +336,35 @@ button:hover, button:focus {
   text-transform: lowercase;
 }
 
-.focusable {
-  position: relative;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+.socialLinks {
+  margin: 0.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.focused {
-  opacity: 1;
-  bottom: 0;
+@media (min-width: 768px) {
+  .socialLinks {
+    font-size: 1.3rem;
+  }
 }
 
-.unfocused {
-  opacity: 0.3;
-  bottom: -0.8rem;
+.socialLinks li:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.socialLinks a {
+  color: #727272;
+}
+
+.socialLinks a:focus,
+.socialLinks a:hover {
+  color: #bcaaa4;
 }
 
 header {
   height: 100vh;
   min-height: 25rem;
-  min-height: calc(var(--vh, 1vh) * 100);
-  -webkit-transition: 1s;
-  transition: 1s;
   text-align: center;
   position: relative;
 }
@@ -468,33 +446,6 @@ footer {
           align-items: center;
 }
 
-.socialLinks {
-  margin: 0.5rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media (min-width: 768px) {
-  .socialLinks {
-    font-size: 1.3rem;
-  }
-}
-
-.socialLinks li:not(:last-child) {
-  margin-right: 0.5rem;
-}
-
-.socialLinks a {
-  color: #727272;
-  text-decoration: none;
-}
-
-.socialLinks a:focus,
-.socialLinks a:hover {
-  color: #bcaaa4;
-}
-
 .copyright {
   margin: 0;
 }
@@ -506,7 +457,6 @@ footer {
 }
 
 .aboutSection h2 {
-  text-align: center;
   margin-bottom: 5rem;
 }
 
@@ -515,7 +465,11 @@ footer {
   margin-bottom: 4rem;
 }
 
-.skills {
+.skillsSection h2 {
+  margin-bottom: 6rem;
+}
+
+.skillsList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -702,13 +656,11 @@ footer {
 }
 
 .contactSection h2 {
-  text-align: center;
   margin-bottom: 6rem;
 }
 
 .contactOptions a {
   color: #bcaaa4;
-  text-decoration: none;
 }
 
 .contactOptions li {

@@ -1,0 +1,39 @@
+.skillsSection h2 {
+  margin-bottom: 6rem;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill {
+  margin: 0.5rem 0;
+  width: 6rem;
+  text-align: center;
+  
+  .fas, .fab {
+    font-size: 3rem;
+    color: $boldColor;
+  }
+
+  svg {
+    width: 3rem;
+    fill: $boldColor;
+  }
+
+  span {
+    margin-top: 0.8rem;
+    display: block;
+  }
+
+  .textForSvg {
+    position: relative;
+    bottom: 0.435rem;
+  }
+
+  .jekyllIcon {
+    transform: scale(1.7);
+  }
+}

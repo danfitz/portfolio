@@ -1,8 +1,16 @@
-@keyframes opacityShift {
-    0% {
-        opacity: 0.9;
-    }
-    100% {
-        opacity: 1;
-    }
+// ===== CLASSES USED TO FOCUS ELEMENTS IN VIEWPORT =====
+
+.focusable {
+  position: relative;
+  transition: all 0.5s;
+}
+
+.focused {
+  opacity: 1;
+  bottom: 0;
+}
+
+.unfocused {
+  opacity: 0.3;
+  bottom: -0.8rem;
 }

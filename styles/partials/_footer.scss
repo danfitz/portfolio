@@ -11,37 +11,6 @@ footer {
   align-items: center;
 }
 
-.socialLinks {
-  margin: 0.5rem 0;
-  display: flex;
-  
-  @include tabletsAndUp {
-    font-size: 1.3rem;
-  }
-
-  // Spaces out social links
-  li:not(:last-child) {
-    margin-right: 0.5rem;
-  }
-
-  a {
-    color: $fadedColor;
-    text-decoration: none;
-  }
-
-  a:visited {
-    // color: $accentColor;
-    // color: $boldColor;
-  }
-
-  a:focus,
-  a:hover {
-    // color: $boldColor;
-    color: $accentColor;
-  }
-
-}
-
 .copyright {
   margin: 0;
 }

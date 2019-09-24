@@ -1,8 +1,6 @@
 header {
   height: 100vh;
   min-height: 25rem;
-  min-height: calc(var(--vh, 1vh) * 100);
-  transition: 1s;
   text-align: center;
   position: relative;
 }
