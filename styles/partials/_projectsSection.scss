@@ -60,12 +60,14 @@
   }
 
   .tool {
-    transition: all 0.1s;
+    min-width: 2.5rem;
   }
 
-  .tool:hover {
-    transform: scale(1.05);
-    color: $boldColor;
+  svg {
+    fill: $baseColor;
+    width: 1.5rem;
+    position: relative;
+    top: 0.15rem;
   }
 
   span {
@@ -78,7 +80,7 @@
   .project {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1rem;
+    grid-column-gap: 0.3rem;
 
     &:not(:last-child) {
       margin-bottom: -3rem;

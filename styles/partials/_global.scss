@@ -47,7 +47,7 @@ button {
   color: $white;
   background: $boldColor;
   border: none;
-  transition: all 0.3s;
+  transition: background 0.3s, color 0.3s;
   
   &:hover,
   &:focus {
@@ -59,8 +59,9 @@ button {
 
 .anchorLink {
   color: $baseColor;
-  position: relative;
   font-weight: 600;
+  display: inline-block;
+  position: relative;
 
   &::after {
     content: "";
