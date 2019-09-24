@@ -23,17 +23,17 @@
 
   label {
     position: absolute;
-    left: 0;
-    top: -0.5rem;
-    font-size: 0.8rem;
-    opacity: 0;
+    left: 1rem;
+    top: 0.8rem;
+    font-size: 1rem;
+    opacity: 0.5;
     transition: all 0.3s;
   }
 }
 
 input, textarea {
   width: 100%;
-  margin-bottom: 1.7rem;
+  margin-bottom: 2rem;
   padding: 0.8rem;
   padding-left: 1rem;
   background: none;
@@ -57,8 +57,11 @@ textarea:focus {
 
 input:focus + label,
 textarea:focus + label {
+  background: $mainColor;
   opacity: 1;
-  top: -1.3rem;
+  font-size: 0.8rem;
+  top: -0.5rem;
+  left: 0.5rem;
 }
 
 button[type="submit"] {
