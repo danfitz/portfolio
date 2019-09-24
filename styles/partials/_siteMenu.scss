@@ -1,0 +1,96 @@
+// @@@@@ 11. HAMBURGER MENU
+// Styles & animations apply up to 768px viewport width
+
+.siteMenu {
+  padding: 1rem 0;
+  position: fixed;
+  z-index: 90;
+  width: 100%;
+}
+
+.menuWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+// Visually hides navigation menu but keeps it accessible
+.menuWrapper ul {
+    padding: 1rem;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: -9.5rem;
+    z-index: 98;
+    width: 10.5rem;
+}
+// Visually hides checkbox and label text but keeps it accessible
+#menuButton, .labelText {
+    position: absolute;
+    opacity: 0;
+}
+
+// Makes label element into a box
+.menuWrapper label {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    // background: $buttonColor;
+    position: relative; // Required to unlock position: absolute for 3 bars
+    top: 0.2rem;
+    left: 0.1rem;
+    // float: right; // pushes box to the right
+    z-index: 99;
+    cursor: pointer;
+}
+// Creates 3 bars in hamburger menu and positions them
+.menuIcon, .menuIcon::before, .menuIcon::after {
+  content: "";
+  display: block;
+  height: 0.1rem;
+  background: $fadedColor;
+}
+.menuIcon {
+  position: absolute;
+  width: 60%;
+  top: 0.92rem;
+  left: 0.4rem;
+}
+.menuIcon::before {
+  position: absolute;
+  width: 100%;
+  bottom: 0.4rem;
+}
+.menuIcon::after {
+  position: absolute;
+  width: 100%;
+  top: 0.4rem;
+}
+
+// Displays nav menu when menu icon inside label is clicked
+.menuWrapper input[type="checkbox"]:checked ~ ul {
+    opacity: 1;
+    background: $white;
+    transition: all 0.5s ease;
+}
+// Hides middle hamburger bar
+.menuWrapper input[type="checkbox"]:checked + label > .menuIcon {
+    background: none;
+}
+// Rotates top and bottom hamburger bar to turn them into an X
+.menuWrapper input[type="checkbox"]:checked + label > .menuIcon::before {
+    transform: rotate(45deg);
+    bottom: 0;
+    transition: all 0.2s ease;
+}
+.menuWrapper input[type="checkbox"]:checked + label > .menuIcon::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: all 0.2s ease;
+}
+
+// Focus state for hamburger menu
+.menuWrapper input[type="checkbox"]:focus + label {
+    box-shadow: 0 0 0 0.12rem $accentColor;
+}

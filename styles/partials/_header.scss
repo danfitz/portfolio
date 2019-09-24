@@ -1,7 +1,6 @@
 header {
   height: 100vh;
   min-height: 25rem;
-  text-align: center;
   position: relative;
 }
 
@@ -15,18 +14,12 @@ header {
   opacity: 0.4;
 }
 
-.siteMenu {
-  padding: 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .siteHeroContent {
   padding-top: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   
   .siteHeading,
   .siteDescription {

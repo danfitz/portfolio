@@ -12,17 +12,33 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <header>
+  <header id="home">
+    <nav class="siteMenu">
+      <div class="menuWrapper wrapper">
+        <div class="siteIcon">
+          Dan Fitz
+        </div>
+        
+        <!-- <div class="menuIcon">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+          <span class="sr-only">Menu</span>
+        </div> -->
+        <input type="checkbox" class="visuallyHidden" id="menuButton" name="menuButton">
+        <label for="menuButton">
+          <span class="labelText visuallyHidden">Menu Button</span>
+          <span class="menuIcon"></span>
+        </label>
+        <ul>
+          <li class="currentPage"><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Blog</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
       <div class="headerWrapper wrapper">
-        <nav class="siteMenu">
-          <div class="siteIcon">
-            Dan Fitz
-          </div>
-          <div class="menuIcon">
-            <i class="fas fa-bars" aria-hidden="true"></i>
-            <span class="sr-only">Menu</span>
-          </div>
-        </nav>
         
         <div class="siteHeroContent">
           <h1 class="siteHeading">Dan Fitz</h1>
@@ -53,7 +69,7 @@
     </header>
 
     <main>
-      <section class="aboutSection focusable">
+      <section class="aboutSection focusable" id="about">
         <div class="aboutWrapper wrapper">
           <h2>About Me</h2>
   
@@ -64,7 +80,7 @@
         </div>
       </section>
 
-      <section class="skillsSection focusable">
+      <section class="skillsSection focusable" id="skills">
         <div class="skillsWrapper wrapper">
           <h2>Skills</h2>
 
@@ -152,7 +168,7 @@
         </div>
       </section>
 
-      <section class="projectsSection focusable">
+      <section class="projectsSection focusable" id="projects">
 
         <h2>Projects</h2>
 
@@ -415,7 +431,7 @@
         </ul>
       </section>
 
-      <section class="contactSection wrapper focusable">
+      <section class="contactSection wrapper focusable" id="contact">
         <h2>Contact Me</h2>
 
         <ul class="contactOptions focusable">

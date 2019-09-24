@@ -277,6 +277,7 @@ main > * {
 
 a {
   text-decoration: none;
+  color: #595959;
 }
 
 button {
@@ -365,7 +366,6 @@ button:hover, button:focus {
 header {
   height: 100vh;
   min-height: 25rem;
-  text-align: center;
   position: relative;
 }
 
@@ -377,19 +377,6 @@ header {
   width: 35%;
   max-width: 15rem;
   opacity: 0.4;
-}
-
-.siteMenu {
-  padding: 1rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .siteHeroContent {
@@ -404,6 +391,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .siteHeroContent .siteHeading,
@@ -422,6 +410,110 @@ header {
   .profileContainer {
     right: 5%;
   }
+}
+
+.siteMenu {
+  padding: 1rem 0;
+  position: fixed;
+  z-index: 90;
+  width: 100%;
+}
+
+.menuWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.menuWrapper ul {
+  padding: 1rem;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: -9.5rem;
+  z-index: 98;
+  width: 10.5rem;
+}
+
+#menuButton, .labelText {
+  position: absolute;
+  opacity: 0;
+}
+
+.menuWrapper label {
+  display: block;
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  top: 0.2rem;
+  left: 0.1rem;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.menuIcon, .menuIcon::before, .menuIcon::after {
+  content: "";
+  display: block;
+  height: 0.1rem;
+  background: #727272;
+}
+
+.menuIcon {
+  position: absolute;
+  width: 60%;
+  top: 0.92rem;
+  left: 0.4rem;
+}
+
+.menuIcon::before {
+  position: absolute;
+  width: 100%;
+  bottom: 0.4rem;
+}
+
+.menuIcon::after {
+  position: absolute;
+  width: 100%;
+  top: 0.4rem;
+}
+
+.menuWrapper input[type="checkbox"]:checked ~ ul {
+  opacity: 1;
+  background: #fff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.menuWrapper input[type="checkbox"]:checked + label > .menuIcon {
+  background: none;
+}
+
+.menuWrapper input[type="checkbox"]:checked + label > .menuIcon::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.menuWrapper input[type="checkbox"]:checked + label > .menuIcon::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.menuWrapper input[type="checkbox"]:focus + label {
+  -webkit-box-shadow: 0 0 0 0.12rem #bcaaa4;
+          box-shadow: 0 0 0 0.12rem #bcaaa4;
 }
 
 footer {
@@ -503,7 +595,7 @@ footer {
 
 .skill .textForSvg {
   position: relative;
-  bottom: 0.435rem;
+  bottom: 0.38rem;
 }
 
 .skill .jekyllIcon {
