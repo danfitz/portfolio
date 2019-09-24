@@ -65,3 +65,10 @@ button {
   font-weight: 700;
   text-transform: lowercase;
 }
+
+.focusable {
+  opacity: 0.3;
+  position: relative;
+  bottom: -0.8rem;
+  transition: all 0.5s;
+}

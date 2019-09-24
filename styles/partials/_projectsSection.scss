@@ -76,14 +76,12 @@
 
 @include tabletsAndUp {
   .project {
-    // width: 100%;
-    // max-width: 2000px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 0.25rem;
+    grid-column-gap: 1rem;
 
     &:not(:last-child) {
-      margin-bottom: -3.75rem;
+      margin-bottom: -3rem;
     }
   }
 
