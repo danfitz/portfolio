@@ -18,54 +18,56 @@
 
 // ===== Contact Form =====
 
-.inputContainer {
-  position: relative;
-
-  label {
-    position: absolute;
-    left: 1rem;
-    top: 0.8rem;
-    font-size: 1rem;
-    opacity: 0.5;
-    transition: all 0.3s;
+.contactForm {
+  .inputContainer {
+    position: relative;
+  
+    label {
+      position: absolute;
+      left: 1rem;
+      top: 0.8rem;
+      font-size: 1rem;
+      opacity: 0.5;
+      transition: all 0.3s;
+    }
   }
-}
-
-input, textarea {
-  width: 100%;
-  margin-bottom: 1.7rem;
-  padding: 0.8rem;
-  padding-left: 1rem;
-  background: none;
-  border: 0.1rem solid $fadedColor;
-  border-radius: 0;
-}
-
-textarea {
-  resize: none;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: $fadedColor;
-}
-
-input:focus,
-textarea:focus {
-  box-shadow: $shadow;
-}
-
-input:focus + label,
-textarea:focus + label {
-  background: $mainColor;
-  opacity: 1;
-  font-size: 0.8rem;
-  top: -0.5rem;
-  left: 0.5rem;
-}
-
-button[type="submit"] {
-  float: right;
+  
+  input, textarea {
+    width: 100%;
+    margin-bottom: 1.7rem;
+    padding: 0.8rem;
+    padding-left: 1rem;
+    background: none;
+    border: 0.1rem solid $fadedColor;
+    border-radius: 0;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    color: $fadedColor;
+  }
+  
+  input:focus,
+  textarea:focus {
+    box-shadow: $shadow;
+  }
+  
+  input:focus + label,
+  textarea:focus + label {
+    background: $mainColor;
+    opacity: 1;
+    font-size: 0.8rem;
+    top: -0.5rem;
+    left: 0.5rem;
+  }
+  
+  button[type="submit"] {
+    float: right;
+  }
 }
 
 @include tabletsAndUp {

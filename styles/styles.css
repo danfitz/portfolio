@@ -229,22 +229,6 @@ ul {
   padding: 0;
 }
 
-.focusable {
-  position: relative;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.focused {
-  opacity: 1;
-  bottom: 0;
-}
-
-.unfocused {
-  opacity: 0.3;
-  bottom: -0.7rem;
-}
-
 html {
   overflow-x: hidden;
 }
@@ -372,11 +356,12 @@ header {
   height: 100vh;
   min-height: 25rem;
   position: relative;
+  background: #f5f2f1;
 }
 
 .profileContainer {
   position: absolute;
-  z-index: -1;
+  z-index: 10;
   bottom: 0;
   right: -1.5rem;
   width: 35%;
@@ -397,6 +382,8 @@ header {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  position: relative;
+  z-index: 20;
 }
 
 .siteHeroContent .siteHeading,
@@ -418,10 +405,22 @@ header {
 }
 
 .siteMenu {
-  padding: 1rem 0;
+  padding: 0.2rem 0;
   position: absolute;
-  z-index: 90;
+  z-index: 1000;
   width: 100%;
+  opacity: 0.4;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  background: -webkit-gradient(linear, left top, right top, from(#f5f2f1), color-stop(75%, rgba(245, 242, 241, 0)));
+  background: linear-gradient(90deg, #f5f2f1 0%, rgba(245, 242, 241, 0) 75%);
+}
+
+.siteMenu .siteIcon {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  position: relative;
+  bottom: 0.1rem;
 }
 
 .menuWrapper {
@@ -442,12 +441,12 @@ header {
   opacity: 0;
   position: absolute;
   left: 0;
-  bottom: -9.5rem;
+  bottom: -10rem;
   z-index: 98;
   width: 10.5rem;
 }
 
-#menuButton, .labelText {
+#menuButton {
   position: absolute;
   opacity: 0;
 }
@@ -457,8 +456,7 @@ header {
   height: 2rem;
   width: 2rem;
   position: relative;
-  top: 0.2rem;
-  left: 0.1rem;
+  margin-left: 0.2rem;
   z-index: 99;
   cursor: pointer;
 }
@@ -517,8 +515,8 @@ header {
 }
 
 .menuWrapper input[type="checkbox"]:focus + label {
-  -webkit-box-shadow: 0 0 0 0.12rem #bcaaa4;
-          box-shadow: 0 0 0 0.12rem #bcaaa4;
+  -webkit-box-shadow: 0 0 0 0.12rem #bcaaa4 inset;
+          box-shadow: 0 0 0 0.12rem #bcaaa4 inset;
 }
 
 footer {
@@ -642,13 +640,13 @@ footer {
 
 .projectThumbnail img {
   position: relative;
-  z-index: 50;
+  z-index: 20;
 }
 
 .projectThumbnail::after {
   content: "";
   position: absolute;
-  z-index: 40;
+  z-index: 10;
   bottom: 1.6rem;
   width: 54%;
   left: 30%;
@@ -761,11 +759,11 @@ footer {
   margin-bottom: 3rem;
 }
 
-.inputContainer {
+.contactForm .inputContainer {
   position: relative;
 }
 
-.inputContainer label {
+.contactForm .inputContainer label {
   position: absolute;
   left: 1rem;
   top: 0.8rem;
@@ -775,7 +773,7 @@ footer {
   transition: all 0.3s;
 }
 
-input, textarea {
+.contactForm input, .contactForm textarea {
   width: 100%;
   margin-bottom: 1.7rem;
   padding: 0.8rem;
@@ -785,38 +783,38 @@ input, textarea {
   border-radius: 0;
 }
 
-textarea {
+.contactForm textarea {
   resize: none;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
+.contactForm input::-webkit-input-placeholder,
+.contactForm textarea::-webkit-input-placeholder {
   color: #727272;
 }
 
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
+.contactForm input:-ms-input-placeholder,
+.contactForm textarea:-ms-input-placeholder {
   color: #727272;
 }
 
-input::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
+.contactForm input::-ms-input-placeholder,
+.contactForm textarea::-ms-input-placeholder {
   color: #727272;
 }
 
-input::placeholder,
-textarea::placeholder {
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
   color: #727272;
 }
 
-input:focus,
-textarea:focus {
+.contactForm input:focus,
+.contactForm textarea:focus {
   -webkit-box-shadow: 0 0 0.2rem 0.15rem #eee;
           box-shadow: 0 0 0.2rem 0.15rem #eee;
 }
 
-input:focus + label,
-textarea:focus + label {
+.contactForm input:focus + label,
+.contactForm textarea:focus + label {
   background: #f9f9f9;
   opacity: 1;
   font-size: 0.8rem;
@@ -824,7 +822,7 @@ textarea:focus + label {
   left: 0.5rem;
 }
 
-button[type="submit"] {
+.contactForm button[type="submit"] {
   float: right;
 }
 
@@ -855,4 +853,25 @@ button[type="submit"] {
   .contactOptions {
     margin-right: 5rem;
   }
+}
+
+.focusable {
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.focused {
+  opacity: 1;
+  bottom: 0;
+}
+
+.unfocused {
+  opacity: 0.3;
+  bottom: -0.7rem;
+}
+
+.fixed {
+  position: fixed;
+  opacity: 1;
 }

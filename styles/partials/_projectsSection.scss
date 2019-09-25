@@ -32,13 +32,13 @@
 
   img {
     position: relative;
-    z-index: 50;
+    z-index: 20;
   }
 
   &::after {
     content: "";
     position: absolute;
-    z-index: 40;
+    z-index: 10;
     bottom: 1.6rem;
     width: 54%;
     left: 30%;

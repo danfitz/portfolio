@@ -3,8 +3,6 @@
 @import "partials/setup";
 @import "partials/variablesAndMixins";
 @import "partials/typography";
-@import "partials/animations";
-
 
 // ===== CONTENT PARTIALS =====
 
@@ -16,3 +14,7 @@
 @import "partials/skillsSection";
 @import "partials/projectsSection";
 @import "partials/contactSection";
+
+// ===== ANIMATIONS GOES LAST TO OVERRIDE ALL STYLES =====
+
+@import "partials/animations";

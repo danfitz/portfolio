@@ -1,17 +1,33 @@
 const portfolio = {};
 
 $.fn.isInViewport = function() {
-  var elementTop = $(this).offset().top;
-  var elementBottom = elementTop + $(this).outerHeight();
+  const elementTop = $(this).offset().top;
+  const elementBottom = elementTop + $(this).outerHeight();
 
-  var viewportTop = $(window).scrollTop();
-  var viewportBottom = viewportTop + $(window).height();
+  const viewportTop = $(window).scrollTop();
+  const viewportBottom = viewportTop + $(window).height();
 
   return elementBottom > viewportTop + ((viewportBottom - viewportTop) * 0.5) && elementTop < viewportBottom - ((viewportBottom - viewportTop) * 0.5);
 };
 
+$.fn.fixedAfter = function(targetElement) {
+  const bottomOfElement = $(targetElement).offset().top + $(targetElement).outerHeight();
+
+  $(window).on("resize scroll load", () => {
+    if ($(window).scrollTop() > bottomOfElement) {
+      $(this)
+        .addClass("fixed")
+        .removeClass("visuallyHidden");
+    } else {
+      $(this)
+        .addClass("visuallyHidden")
+        .removeClass("fixed");
+    };
+  });
+};
+
 portfolio.init = function() {
-  $(window).on("resize scroll load", function () {
+  $(window).on("resize scroll load", function() {
     $(".focusable").each(function() {
       if ($(this).isInViewport()) {
         $(this)
@@ -24,6 +40,8 @@ portfolio.init = function() {
       };
     });
   });
+
+  $(".siteMenu").fixedAfter(".siteHeroContent .socialLinks");
 };
 
 $(document).ready(function() {
