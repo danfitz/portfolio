@@ -364,6 +364,10 @@ button:hover, button:focus {
   color: #bcaaa4;
 }
 
+.socialLinks svg {
+  width: 1.3rem;
+}
+
 header {
   height: 100vh;
   min-height: 25rem;
