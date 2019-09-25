@@ -21,7 +21,7 @@
 }
 
 .projectLinks {
-  margin: 1rem 0;
+  margin-bottom: 1.2rem;
 }
 
 .projectThumbnail {
@@ -50,7 +50,7 @@
 }
 
 .projectTools {
-  margin-bottom: 1rem;
+  margin: 0.75rem 0 1rem;
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
@@ -109,10 +109,6 @@
   .projectThumbnail {
     box-shadow: none;
     width: 90%;
-  }
-
-  .projectTools {
-    margin: 0;
   }
 }
 
