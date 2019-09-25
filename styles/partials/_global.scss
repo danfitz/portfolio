@@ -59,28 +59,28 @@ button {
 
 .anchorLink {
   color: $baseColor;
-  font-weight: 600;
   display: inline-block;
   position: relative;
+  font-weight: 700;
 
   &::after {
     content: "";
     position: absolute;
     width: 80%;
     height: 0.4rem;
-    background: adjust-color($accentColor, $alpha: -0.6);
-    bottom: 0;
+    background: adjust-color($accentColor, $alpha: -0.5);
+    bottom: 0.15rem;
     left: 10%;
     transition: all 0.3s;
   }
-
+  
   &:visited {
     color: $baseColor;
   }
-
+  
   &:hover::after,
   &:focus::after {
-    bottom: -0.2rem;
+    bottom: 0rem;
     left: 0;
     width: 100%;
   }
@@ -106,7 +106,7 @@ button {
 
   // Spaces out social links
   li:not(:last-child) {
-    margin-right: 0.5rem;
+    margin-right: 0.8rem;
   }
 
   a {

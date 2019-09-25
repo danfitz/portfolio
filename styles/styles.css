@@ -303,9 +303,9 @@ button:hover, button:focus {
 
 .anchorLink {
   color: #595959;
-  font-weight: 600;
   display: inline-block;
   position: relative;
+  font-weight: 700;
 }
 
 .anchorLink::after {
@@ -313,8 +313,8 @@ button:hover, button:focus {
   position: absolute;
   width: 80%;
   height: 0.4rem;
-  background: rgba(188, 170, 164, 0.4);
-  bottom: 0;
+  background: rgba(188, 170, 164, 0.5);
+  bottom: 0.15rem;
   left: 10%;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -325,7 +325,7 @@ button:hover, button:focus {
 }
 
 .anchorLink:hover::after, .anchorLink:focus::after {
-  bottom: -0.2rem;
+  bottom: 0rem;
   left: 0;
   width: 100%;
 }
@@ -352,7 +352,7 @@ button:hover, button:focus {
 }
 
 .socialLinks li:not(:last-child) {
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
 }
 
 .socialLinks a {
@@ -699,7 +699,7 @@ footer {
     grid-column-gap: 0.3rem;
   }
   .project:not(:last-child) {
-    margin-bottom: -3rem;
+    margin-bottom: -2rem;
   }
   .project:nth-child(even) .projectCard:first-child {
     -ms-grid-row: 1;
