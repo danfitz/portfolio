@@ -1,6 +1,7 @@
-const portfolio = {};
+// ===== CUSTOM METHODS ADDED TO JQUERY =====
 
-$.fn.isInViewport = function() {
+// Checks if element is in viewport
+$.fn.isInViewport = function () {
   const elementTop = $(this).offset().top;
   const elementBottom = elementTop + $(this).outerHeight();
 
@@ -10,7 +11,8 @@ $.fn.isInViewport = function() {
   return elementBottom > viewportTop + ((viewportBottom - viewportTop) * 0.5) && elementTop < viewportBottom - ((viewportBottom - viewportTop) * 0.5);
 };
 
-$.fn.fixedAfter = function(targetElement) {
+// Fixes element after it passes another target element in the viewport
+$.fn.fixedAfter = function (targetElement) {
   const bottomOfElement = $(targetElement).offset().top + $(targetElement).outerHeight();
 
   $(window).on("resize scroll load", () => {
@@ -26,7 +28,12 @@ $.fn.fixedAfter = function(targetElement) {
   });
 };
 
-portfolio.init = function() {
+// ===== PORTFOLIO NAMESPACE =====
+
+const portfolio = {};
+
+// .focusable elements are in focus when in center of viewport; otherwise they're unfocused
+portfolio.addFocus = function() {
   $(window).on("resize scroll load", function() {
     $(".focusable").each(function() {
       if ($(this).isInViewport()) {
@@ -40,10 +47,23 @@ portfolio.init = function() {
       };
     });
   });
-
-  $(".siteMenu").fixedAfter(".siteHeroContent .socialLinks");
 };
 
+// Whenever a nav menu item is clicked, the menu is closed
+portfolio.closeNavUponClick = function() {
+  $("nav a").on("click", function() {
+    $("#menuButton").prop("checked", false);
+  });
+};
+
+// Init method containing all other method calls
+portfolio.init = function() {
+  $(".siteMenu").fixedAfter(".siteHeroContent .socialLinks");
+  portfolio.addFocus();
+  portfolio.closeNavUponClick();
+};
+
+// DOCUMENT READY + INIT
 $(document).ready(function() {
   portfolio.init();
 });
