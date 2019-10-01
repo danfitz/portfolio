@@ -49,10 +49,16 @@ portfolio.addFocus = function() {
   });
 };
 
-// Whenever a nav menu item is clicked, the menu is closed
+// Whenever a nav menu item is clicked, close menu and smooth scroll to relevant section
 portfolio.closeNavUponClick = function() {
   $("nav a").on("click", function() {
+    // Close menu
     $("#menuButton").prop("checked", false);
+
+    // Smooth scroll to section
+    $("html, body").animate({
+      scrollTop: $(this.hash).offset().top,
+    }, 1000);
   });
 };
 
