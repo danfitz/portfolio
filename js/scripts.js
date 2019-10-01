@@ -49,10 +49,10 @@ portfolio.addFocus = function() {
   });
 };
 
-// Whenever a nav menu item is clicked, close menu and smooth scroll to relevant section
+// Whenever an ID link (href="#content") is clicked, close menu and smooth scroll to relevant section
 portfolio.closeNavUponClick = function() {
+  // Applies to nav menu, skip to main button, and go to main down arrow icon
   $("nav a, .skipToMain, .goToMain").on("click", function() {
-    console.log("HELLO!");
     // Close menu
     $("#menuButton").prop("checked", false);
 
