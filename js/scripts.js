@@ -51,7 +51,8 @@ portfolio.addFocus = function() {
 
 // Whenever a nav menu item is clicked, close menu and smooth scroll to relevant section
 portfolio.closeNavUponClick = function() {
-  $("nav a").on("click", function() {
+  $("nav a, .skipToMain, .goToMain").on("click", function() {
+    console.log("HELLO!");
     // Close menu
     $("#menuButton").prop("checked", false);
 

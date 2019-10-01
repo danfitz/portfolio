@@ -15,7 +15,16 @@
   bottom: -0.7rem;
 }
 
+// ===== CLASS TOGGLE FOR NAV MENU =====
+
 .fixed {
   position: fixed;
   opacity: 1;
+}
+
+// ===== ANIMATION FOR DOWN ARROW =====
+
+@keyframes upAndDown {
+  from { top: -0.5rem; }
+  to { top: 0.5rem; }
 }

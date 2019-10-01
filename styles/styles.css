@@ -314,13 +314,13 @@ button:hover, button:focus {
   width: 100%;
 }
 
-.skipToMain {
+.skipToMain button {
   position: absolute;
   z-index: 70;
   opacity: 0;
 }
 
-.skipToMain:focus {
+.skipToMain button:focus {
   opacity: 1;
 }
 
@@ -403,6 +403,19 @@ header {
 
 .siteHeroContent .siteHeading {
   margin-bottom: 2rem;
+}
+
+.siteHeroContent .goToMain {
+  color: #393939;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  position: relative;
+  -webkit-animation: upAndDown 0.5s infinite 0s alternate;
+          animation: upAndDown 0.5s infinite 0s alternate;
+}
+
+.siteHeroContent .goToMain:hover, .siteHeroContent .goToMain:focus {
+  color: #bcaaa4;
 }
 
 @media (min-width: 768px) {
@@ -884,4 +897,22 @@ footer {
 .fixed {
   position: fixed;
   opacity: 1;
+}
+
+@-webkit-keyframes upAndDown {
+  from {
+    top: -0.5rem;
+  }
+  to {
+    top: 0.5rem;
+  }
+}
+
+@keyframes upAndDown {
+  from {
+    top: -0.5rem;
+  }
+  to {
+    top: 0.5rem;
+  }
 }
