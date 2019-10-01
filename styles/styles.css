@@ -406,12 +406,12 @@ header {
 }
 
 .siteHeroContent .goToMain {
-  color: #393939;
   margin-top: 1rem;
-  font-size: 1.5rem;
   position: relative;
   -webkit-animation: upAndDown 0.5s infinite 0s alternate;
           animation: upAndDown 0.5s infinite 0s alternate;
+  color: #393939;
+  width: 1.1rem;
 }
 
 .siteHeroContent .goToMain:hover, .siteHeroContent .goToMain:focus {

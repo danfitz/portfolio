@@ -34,11 +34,11 @@ header {
   }
   
   .goToMain {
-    color: $boldColor;
     margin-top: 1rem;
-    font-size: 1.5rem;
     position: relative;
     animation: upAndDown 0.5s infinite 0s alternate;
+    color: $boldColor;
+    width: 1.1rem;
 
     &:hover,
     &:focus {
