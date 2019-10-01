@@ -314,6 +314,16 @@ button:hover, button:focus {
   width: 100%;
 }
 
+.skipToMain {
+  position: absolute;
+  z-index: 70;
+  opacity: 0;
+}
+
+.skipToMain:focus {
+  opacity: 1;
+}
+
 .siteIcon {
   color: #393939;
   font-size: 2.39rem;

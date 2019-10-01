@@ -86,6 +86,16 @@ button {
   }
 }
 
+.skipToMain {
+  position: absolute;
+  z-index: 70;
+  opacity: 0;
+
+  &:focus {
+    opacity: 1;
+  }
+}
+
 // ===== OTHER =====
 
 .siteIcon {
