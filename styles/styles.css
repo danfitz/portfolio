@@ -583,6 +583,11 @@ footer {
   margin-bottom: 4rem;
 }
 
+.biography .buttonLink button {
+  display: block;
+  margin: 0 auto;
+}
+
 .skillsSection h2 {
   margin-bottom: 6rem;
 }

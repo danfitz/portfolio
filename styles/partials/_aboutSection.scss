@@ -7,4 +7,9 @@
 .biography {
   margin-top: 1rem;
   margin-bottom: 4rem;
+
+  .buttonLink button {
+    display: block;
+    margin: 0 auto;
+  }
 }
