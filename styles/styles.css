@@ -780,6 +780,11 @@ footer {
   margin-bottom: 6rem;
 }
 
+.contactOptions {
+  width: 100%;
+  text-align: center;
+}
+
 .contactOptions a {
   color: #bcaaa4;
 }
@@ -875,12 +880,6 @@ footer {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .contactOptions {
-    margin-right: 5rem;
   }
 }
 

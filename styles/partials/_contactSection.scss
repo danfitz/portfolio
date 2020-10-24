@@ -7,6 +7,9 @@
 // ===== Contact Options =====
 
 .contactOptions {
+  width: 100%;
+  text-align: center;
+
   a {
     color: $accentColor;
   }
@@ -89,8 +92,8 @@
   }
 }
 
-@include desktopsAndUp {
-  .contactOptions {
-    margin-right: 5rem;
-  }
-}
+// @include desktopsAndUp {
+//   .contactOptions {
+//     margin-right: 5rem;
+//   }
+// }
